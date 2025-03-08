@@ -45,3 +45,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           folder: _site  # Ensure this points to the output directory
+          target-folder: phd
