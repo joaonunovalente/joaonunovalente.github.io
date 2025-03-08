@@ -36,7 +36,8 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./phd  # Build from the "phd" folder
-          destination: ./_site  # Store in the "_site" folder
+          destination: ./_site  # Store in the "_site" folder 
+          target-folder: phd
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
