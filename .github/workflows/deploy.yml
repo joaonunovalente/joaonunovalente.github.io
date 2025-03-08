@@ -17,7 +17,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y ruby-full build-essential zlib1g-dev
-        gem install jekyll bundler
+
+    - name: Set up local Ruby gem installation
+      run: |
+        echo "export GEM_HOME=$HOME/.gem" >> $GITHUB_ENV
+        echo "export GEM_PATH=$HOME/.gem" >> $GITHUB_ENV
+        echo "export PATH=$GEM_HOME/bin:$PATH" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
