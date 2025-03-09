@@ -44,5 +44,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          folder: _site  # Ensure this points to the output directory
-          target-folder: phd
+          source: _site  # Correct input (folder where Jekyll builds the site)
